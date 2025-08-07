@@ -16,7 +16,7 @@ export function createGallery(images) {
     .map(({ webformatURL, largeImageURL, tags }) => {
       return `
         <a href="${largeImageURL}">
-          <img src="${webformatURL}" alt="${tags}" />
+          <img src="${webformatURL}" alt="${tags}" width="360" height="200" />
         </a>
       `;
     })
@@ -31,9 +31,15 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-  galleryContainer.classList.add('loading');
+  const loaderText = document.createElement('p');
+  loaderText.textContent = 'Loading images, please wait...';
+  loaderText.classList.add('loader-text');
+  galleryContainer.appendChild(loaderText);
 }
 
 export function hideLoader() {
-  galleryContainer.classList.remove('loading');
+  const loaderText = galleryContainer.querySelector('.loader-text');
+  if (loaderText) {
+    galleryContainer.removeChild(loaderText);
+  }
 }

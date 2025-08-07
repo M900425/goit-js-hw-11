@@ -1,0 +1,55 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+button {
+  color: #fff;
+  background-color: #4E75FF;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: #6C8CFF;
+}
+
+input {
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+input.filled {
+  border-color: #4E75FF !important;
+}
+
+input:not(.filled):hover {
+  border-color: #000000;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery img {
+  object-fit: cover;
+}
