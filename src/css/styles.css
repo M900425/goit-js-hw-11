@@ -52,10 +52,27 @@ input:not(.filled):hover {
   gap: 24px;
 }
 
+.gallery-item {
+  border: 1px solid #808080;
+  padding-bottom: 4px;
+}
+
 .gallery li {
   list-style-type: none;
 }
 
 .gallery img {
   object-fit: cover;
+}
+
+.image-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px 0 20px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
